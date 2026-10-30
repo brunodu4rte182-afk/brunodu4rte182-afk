@@ -101,13 +101,13 @@
   <text x="143" y="127" class="mono" font-size="10" font-weight="700" fill="#22c55e" letter-spacing="2">ONLINE</text>
 
   <!-- Cabeçalho: botões e badge -->
-  <a href="Resume_Bruno_Duarte_EN.pdf" target="_blank">
+  <a href="./resume.html" target="_blank">
     <g class="btn">
       <rect x="570" y="54" width="130" height="34" rx="8" fill="#0c4a6e" stroke="#38bdf8" stroke-width="1.5"/>
       <text x="635" y="76" text-anchor="middle" class="mono" font-size="13" font-weight="700" fill="#e0f2fe">📄 RESUME</text>
     </g>
   </a>
-  <a href="https://duartexsolutions.pages.dev" target="_blank">
+  <a href="duartexsolutions.pages.dev/" target="_blank">
     <g class="btn">
       <rect x="710" y="54" width="130" height="34" rx="8" fill="#134e4a" stroke="#06b6d4" stroke-width="1.5"/>
       <text x="775" y="76" text-anchor="middle" class="mono" font-size="13" font-weight="700" fill="#cffafe">🚀 PROJECTS</text>
