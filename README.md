@@ -1,16 +1,15 @@
-## Hi there 👋
+1. Top Bar & Language Switcher
+Botões no topo para facilitar a navegação rápida e alternar o idioma:
 
-<!--
-**brunodu4rte182-afk/brunodu4rte182-afk** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+Markdown
+<div align="right">
+  <a href="./README.pt-br.md">🇧🇷 Versão em Português</a> • 
+  <a href="./Resume%20Bruno%20Duarte%20(EN).pdf">📄 Resume (PDF)</a>
+</div>
+2. Vitrine Visual (O SVG Animado)
+O diagrama interativo em largura total:
 
-Here are some ideas to get you started:
-
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+Markdown
+<p align="center">
+  <img src="architecture.svg?v=1" alt="DuarteX Architecture" width="100%" />
+</p>
