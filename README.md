@@ -16,6 +16,6 @@ O SVG pode demorar alguns minutos para aparecer. Se aparecer sem animação, dê
 <img src="architecture.svg" alt="DuarteX Solutions" width="100%"/>
 
 <p align="center">
-  <a href="Resume_Bruno_Duarte_EN.pdf">📄 Resume</a> •
+  <a href="resume.html">📄 Resume</a> •
   <a href="https://duartexsolutions.pages.dev">🚀 Projects</a>
 </p>
