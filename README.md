@@ -16,6 +16,6 @@ Markdown
   <a href="./Resume%20Bruno%20Duarte%20(EN).pdf">📄 Resume (PDF)</a>
 
 <p align="center">
-  <a href="Resume_Bruno_Duarte_EN.pdf">📄 Resume</a> •
+  <a href="resume.html">📄 Resume</a> •
   <a href="https://duartexsolutions.pages.dev">🚀 Projects</a>
 </p>
