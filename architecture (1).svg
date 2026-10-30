@@ -1,0 +1,212 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 880 500" width="880" height="500" role="img" aria-labelledby="t d">
+  <title id="t">DuarteX Solutions - event-driven architecture</title>
+  <desc id="d">Animated pipeline graph: INGEST, TRANSFORM, DISPATCH, with three case cards.</desc>
+
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#080c14"/>
+      <stop offset="1" stop-color="#0f172a"/>
+    </linearGradient>
+    <linearGradient id="cardBg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#111c33"/>
+      <stop offset="1" stop-color="#0c1424"/>
+    </linearGradient>
+    <clipPath id="avatarClip">
+      <circle cx="70" cy="92" r="30"/>
+    </clipPath>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="2.5" result="b"/>
+      <feMerge>
+        <feMergeNode in="b"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <pattern id="dots" width="24" height="24" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1" fill="#1e293b" opacity="0.6"/>
+    </pattern>
+  </defs>
+
+  <style>
+    .mono { font-family: ui-monospace, SFMono-Regular, Consolas, "Courier New", monospace; }
+    .sans { font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+
+    .beam { fill: none; stroke-linecap: round; stroke-linejoin: round; stroke-width: 3;
+            stroke-dasharray: 90 910; stroke-dashoffset: 1000;
+            animation: flow 3.2s linear infinite; }
+    .beam2 { animation-delay: -1.6s; }
+    .d1 { animation-delay: -0.4s; }
+    .d2 { animation-delay: -1.2s; }
+    .d3 { animation-delay: -2.0s; }
+    @keyframes flow { to { stroke-dashoffset: 0; } }
+
+    .ping { transform-box: fill-box; transform-origin: center;
+            animation: ping 2.4s ease-out infinite; }
+    .ping.p2 { animation-delay: -0.8s; }
+    .ping.p3 { animation-delay: -1.6s; }
+    @keyframes ping {
+      0%   { transform: scale(1); opacity: 0.8; }
+      100% { transform: scale(3.6); opacity: 0; }
+    }
+
+    .orbit { transform-origin: 70px 92px; animation: spin 9s linear infinite; }
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    .live { animation: live 1.8s ease-in-out infinite; }
+    @keyframes live { 0%, 100% { opacity: 1; } 50% { opacity: 0.35; } }
+
+    .cursor { animation: blink 1s steps(1) infinite; }
+    @keyframes blink { 0%, 49% { opacity: 1; } 50%, 100% { opacity: 0; } }
+
+    .card { transition: transform 0.25s ease; cursor: pointer; }
+    .card:hover { transform: translateY(-4px); }
+    .card:hover .cardBox { stroke: #38bdf8; }
+    .cardBox { transition: stroke 0.25s ease; }
+
+    .btn { transition: opacity 0.2s ease; cursor: pointer; }
+    .btn:hover { opacity: 0.8; }
+
+    @media (prefers-reduced-motion: reduce) {
+      .beam, .ping, .orbit, .live, .cursor { animation: none; }
+      .beam { stroke-dashoffset: 0; stroke-dasharray: none; opacity: 0.5; }
+    }
+  </style>
+
+  <!-- Fundo e moldura -->
+  <rect x="1" y="1" width="878" height="498" rx="12" fill="url(#bg)" stroke="#1e293b" stroke-width="2"/>
+  <rect x="1" y="36" width="878" height="462" fill="url(#dots)" opacity="0.5"/>
+
+  <!-- Barra de topo estilo janela -->
+  <path d="M1 13 Q1 1 13 1 H867 Q879 1 879 13 V36 H1 Z" fill="#0b1220"/>
+  <line x1="1" y1="36" x2="879" y2="36" stroke="#1e293b" stroke-width="1"/>
+  <circle cx="24" cy="18" r="6" fill="#ef4444"/>
+  <circle cx="44" cy="18" r="6" fill="#f59e0b"/>
+  <circle cx="64" cy="18" r="6" fill="#22c55e"/>
+  <text x="440" y="22" text-anchor="middle" class="mono" font-size="12" fill="#64748b">duartex-pipeline // event-driven-architecture</text>
+
+  <!-- Cabeçalho: avatar -->
+  <circle cx="70" cy="92" r="31" fill="#0f172a"/>
+  <image href="data:image/jpeg;base64,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" x="40" y="62" width="60" height="60" clip-path="url(#avatarClip)" preserveAspectRatio="xMidYMid slice"/>
+  <circle cx="70" cy="92" r="31" fill="none" stroke="#1e293b" stroke-width="1.5"/>
+  <g class="orbit">
+    <circle cx="70" cy="92" r="40" fill="none" stroke="#38bdf8" stroke-width="1.5" stroke-dasharray="6 8" opacity="0.7"/>
+    <circle cx="110" cy="92" r="3.5" fill="#06b6d4" filter="url(#glow)"/>
+  </g>
+  <circle cx="97" cy="118" r="6" fill="#080c14"/>
+  <circle cx="97" cy="118" r="4.5" fill="#22c55e" class="live" filter="url(#glow)"/>
+
+  <!-- Cabeçalho: nome e subtítulo -->
+  <text x="130" y="82" class="mono" font-size="26" font-weight="700" fill="#e2e8f0" letter-spacing="1">DUARTEX SOLUTIONS</text>
+  <text x="130" y="105" class="sans" font-size="13" fill="#94a3b8">DevOps Automation • Data Architecture • Dynamics 365 Core</text>
+  <circle cx="134" cy="123" r="3" fill="#22c55e" class="live"/>
+  <text x="143" y="127" class="mono" font-size="10" font-weight="700" fill="#22c55e" letter-spacing="2">ONLINE</text>
+
+  <!-- Cabeçalho: botões e badge -->
+  <a href="Resume_Bruno_Duarte_EN.pdf" target="_blank">
+    <g class="btn">
+      <rect x="570" y="54" width="130" height="34" rx="8" fill="#0c4a6e" stroke="#38bdf8" stroke-width="1.5"/>
+      <text x="635" y="76" text-anchor="middle" class="mono" font-size="13" font-weight="700" fill="#e0f2fe">📄 RESUME</text>
+    </g>
+  </a>
+  <a href="https://duartexsolutions.pages.dev" target="_blank">
+    <g class="btn">
+      <rect x="710" y="54" width="130" height="34" rx="8" fill="#134e4a" stroke="#06b6d4" stroke-width="1.5"/>
+      <text x="775" y="76" text-anchor="middle" class="mono" font-size="13" font-weight="700" fill="#cffafe">🚀 PROJECTS</text>
+    </g>
+  </a>
+  <rect x="700" y="102" width="140" height="22" rx="11" fill="#052e1a" stroke="#166534" stroke-width="1"/>
+  <circle cx="716" cy="113" r="3.5" fill="#22c55e" class="live"/>
+  <text x="728" y="117" class="mono" font-size="10" font-weight="700" fill="#4ade80" letter-spacing="1">SYSTEMS OK</text>
+
+  <!-- Grafo / barramento (coordenadas originais deslocadas 170px para baixo) -->
+  <g transform="translate(0,170)">
+
+    <!-- Trilhos base -->
+    <g fill="none" stroke="#1e293b" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M 40 90 L 150 90 L 180 50 L 370 50 L 400 90 L 590 90 L 620 130 L 760 130"/>
+      <path d="M 275 50 L 275 140"/>
+      <path d="M 495 90 L 495 140"/>
+      <path d="M 715 130 L 715 140"/>
+    </g>
+
+    <!-- Feixes de luz animados -->
+    <g filter="url(#glow)">
+      <path class="beam" stroke="#38bdf8" pathLength="1000" d="M 40 90 L 150 90 L 180 50 L 370 50 L 400 90 L 590 90 L 620 130 L 760 130"/>
+      <path class="beam beam2" stroke="#06b6d4" pathLength="1000" d="M 40 90 L 150 90 L 180 50 L 370 50 L 400 90 L 590 90 L 620 130 L 760 130"/>
+      <path class="beam d1" stroke="#38bdf8" pathLength="1000" d="M 275 50 L 275 140"/>
+      <path class="beam d2" stroke="#06b6d4" pathLength="1000" d="M 495 90 L 495 140"/>
+      <path class="beam d3" stroke="#38bdf8" pathLength="1000" d="M 715 130 L 715 140"/>
+    </g>
+
+    <!-- Pontos de entrega nos cards -->
+    <circle cx="275" cy="140" r="3.5" fill="#06b6d4"/>
+    <circle cx="495" cy="140" r="3.5" fill="#06b6d4"/>
+    <circle cx="715" cy="140" r="3.5" fill="#06b6d4"/>
+    <circle cx="40" cy="90" r="4" fill="#38bdf8"/>
+    <circle cx="760" cy="130" r="4" fill="#38bdf8"/>
+
+    <!-- Nó A: INGEST -->
+    <circle class="ping" cx="150" cy="90" r="7" fill="none" stroke="#38bdf8" stroke-width="2"/>
+    <circle class="ping p2" cx="150" cy="90" r="7" fill="none" stroke="#38bdf8" stroke-width="1.5"/>
+    <circle cx="150" cy="90" r="7" fill="#080c14" stroke="#38bdf8" stroke-width="2.5"/>
+    <circle cx="150" cy="90" r="2.5" fill="#38bdf8"/>
+    <text x="150" y="114" text-anchor="middle" class="mono" font-size="11" font-weight="700" fill="#38bdf8" letter-spacing="1.5">INGEST</text>
+
+    <!-- Nó B: TRANSFORM -->
+    <circle class="ping p2" cx="370" cy="50" r="7" fill="none" stroke="#06b6d4" stroke-width="2"/>
+    <circle class="ping p3" cx="370" cy="50" r="7" fill="none" stroke="#06b6d4" stroke-width="1.5"/>
+    <circle cx="370" cy="50" r="7" fill="#080c14" stroke="#06b6d4" stroke-width="2.5"/>
+    <circle cx="370" cy="50" r="2.5" fill="#06b6d4"/>
+    <text x="370" y="32" text-anchor="middle" class="mono" font-size="11" font-weight="700" fill="#06b6d4" letter-spacing="1.5">TRANSFORM</text>
+
+    <!-- Nó C: DISPATCH -->
+    <circle class="ping p3" cx="590" cy="90" r="7" fill="none" stroke="#38bdf8" stroke-width="2"/>
+    <circle class="ping" cx="590" cy="90" r="7" fill="none" stroke="#38bdf8" stroke-width="1.5"/>
+    <circle cx="590" cy="90" r="7" fill="#080c14" stroke="#38bdf8" stroke-width="2.5"/>
+    <circle cx="590" cy="90" r="2.5" fill="#38bdf8"/>
+    <text x="590" y="72" text-anchor="middle" class="mono" font-size="11" font-weight="700" fill="#38bdf8" letter-spacing="1.5">DISPATCH</text>
+
+    <!-- Card 01 -->
+    <g transform="translate(175,140)">
+      <g class="card">
+        <rect class="cardBox" x="0" y="0" width="200" height="116" rx="10" fill="url(#cardBg)" stroke="#1e293b" stroke-width="1.5"/>
+        <rect x="0" y="0" width="200" height="3" rx="1.5" fill="#38bdf8"/>
+        <text x="16" y="26" class="mono" font-size="10" font-weight="700" fill="#38bdf8" letter-spacing="2">CASE 01</text>
+        <text x="16" y="48" class="mono" font-size="16" font-weight="700" fill="#e2e8f0">DuarteX Flow</text>
+        <text x="16" y="66" class="sans" font-size="12" fill="#94a3b8">Event-Driven Ingestion</text>
+        <text x="16" y="86" class="mono" font-size="11" fill="#67e8f9">n8n • Webhooks • Docker</text>
+        <text x="16" y="105" class="mono" font-size="11" fill="#22c55e">&gt; pipeline: active</text>
+      </g>
+    </g>
+
+    <!-- Card 02 -->
+    <g transform="translate(395,140)">
+      <g class="card">
+        <rect class="cardBox" x="0" y="0" width="200" height="116" rx="10" fill="url(#cardBg)" stroke="#1e293b" stroke-width="1.5"/>
+        <rect x="0" y="0" width="200" height="3" rx="1.5" fill="#06b6d4"/>
+        <text x="16" y="26" class="mono" font-size="10" font-weight="700" fill="#06b6d4" letter-spacing="2">CASE 02</text>
+        <text x="16" y="48" class="mono" font-size="16" font-weight="700" fill="#e2e8f0">Data Core &amp; BI</text>
+        <text x="16" y="66" class="sans" font-size="12" fill="#94a3b8">Relational Aggregations</text>
+        <text x="16" y="86" class="mono" font-size="11" fill="#67e8f9">SQL • Power BI • Models</text>
+        <text x="16" y="105" class="mono" font-size="11" fill="#22c55e">&gt; queries: synced</text>
+      </g>
+    </g>
+
+    <!-- Card 03 -->
+    <g transform="translate(615,140)">
+      <g class="card">
+        <rect class="cardBox" x="0" y="0" width="200" height="116" rx="10" fill="url(#cardBg)" stroke="#1e293b" stroke-width="1.5"/>
+        <rect x="0" y="0" width="200" height="3" rx="1.5" fill="#38bdf8"/>
+        <text x="16" y="26" class="mono" font-size="10" font-weight="700" fill="#38bdf8" letter-spacing="2">CASE 03</text>
+        <text x="16" y="48" class="mono" font-size="16" font-weight="700" fill="#e2e8f0">HubSpot CRM</text>
+        <text x="16" y="66" class="sans" font-size="12" fill="#94a3b8">Business Architecture</text>
+        <text x="16" y="86" class="mono" font-size="11" fill="#67e8f9">Pipelines • Automations</text>
+        <text x="16" y="105" class="mono" font-size="11" fill="#22c55e">&gt; status: 0 errors</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- Rodapé: linha de comando -->
+  <line x1="24" y1="446" x2="856" y2="446" stroke="#1e293b" stroke-width="1"/>
+  <text x="40" y="474" class="mono" font-size="14" fill="#e2e8f0" textLength="525" lengthAdjust="spacing"><tspan fill="#22c55e">arch@duartex</tspan><tspan fill="#38bdf8">:~$</tspan><tspan fill="#e2e8f0"> docker-compose up -d --build n8n data-pipeline</tspan></text>
+  <rect class="cursor" x="571" y="460" width="9" height="17" fill="#38bdf8"/>
+</svg>
