@@ -9,11 +9,6 @@ Markdown
 2. Vitrine Visual (O SVG Animado)
 O diagrama interativo em largura total:
 
-Markdown
-<p align="center">
-  <img src="architecture.svg?v=1" alt="DuarteX Architecture" width="100%" />
-</p>
-
 Os links dentro do SVG não clicam no README, então os links em texto logo abaixo da imagem é que fazem esse papel.
 
 O SVG pode demorar alguns minutos para aparecer. Se aparecer sem animação, dê um refresh forçado (Ctrl+F5), porque o GitHub guarda a imagem em cache.
