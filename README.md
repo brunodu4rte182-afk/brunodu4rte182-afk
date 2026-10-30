@@ -1,3 +1,13 @@
+<p align="right">
+  <a href="https://duartexsolutions.pages.dev/">
+    <img src="https://img.shields.io/badge/PROJECTS-VISIT-134e4a?style=for-the-badge&amp;labelColor=0b1220" alt="Projects">
+  </a>
+  <a href="./resume.html">
+    <img src="https://img.shields.io/badge/RESUME-OPEN-0c4a6e?style=for-the-badge&amp;labelColor=0b1220" alt="Resume">
+  </a>
+</p>
+
+
 1. Vitrine Visual (O SVG Animado)
 O diagrama interativo em largura total:
 
