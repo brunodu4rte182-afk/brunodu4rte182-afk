@@ -2,7 +2,7 @@
   <a href="https://duartexsolutions.pages.dev/">
     <img src="https://img.shields.io/badge/PROJECTS-VISIT-134e4a?style=for-the-badge&amp;labelColor=0b1220" alt="Projects">
   </a>
-  <a href="brunodu4rte182-afk.pages.dev/">
+  <a href="https://brunodu4rte182-afk.pages.dev/">
     <img src="https://img.shields.io/badge/RESUME-OPEN-0c4a6e?style=for-the-badge&amp;labelColor=0b1220" alt="Resume">
   </a>
 </p>
